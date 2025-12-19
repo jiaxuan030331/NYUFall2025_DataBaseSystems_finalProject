@@ -50,10 +50,13 @@ class MlModelMetadata(Base):
     model_version: Mapped[str | None] = mapped_column(String(100), nullable=True)
     algorithm: Mapped[str | None] = mapped_column(String(100), nullable=True)
     trained_at: Mapped[object | None] = mapped_column(DateTime, nullable=True)
+    trained_data_from: Mapped[object | None] = mapped_column(DateTime, nullable=True)
+    trained_data_to: Mapped[object | None] = mapped_column(DateTime, nullable=True)
     eval_metric_name: Mapped[str | None] = mapped_column(String(50), nullable=True)
     eval_metric_value: Mapped[object | None] = mapped_column(Numeric(10, 6), nullable=True)
     is_active: Mapped[int | None] = mapped_column(Integer, nullable=True)
     artifact_path: Mapped[str | None] = mapped_column(String(500), nullable=True)
+    notes: Mapped[str | None] = mapped_column(String(1000), nullable=True)
 
 
 class CustomerRiskScoreLatest(Base):

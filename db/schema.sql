@@ -52,10 +52,13 @@ CREATE TABLE ml_model_metadata (
   model_version VARCHAR(100),
   algorithm VARCHAR(100),
   trained_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  trained_data_from DATETIME,
+  trained_data_to DATETIME,
   eval_metric_name VARCHAR(50),
   eval_metric_value DECIMAL(10,6),
   is_active TINYINT DEFAULT 0,
-  artifact_path VARCHAR(500)
+  artifact_path VARCHAR(500),
+  notes VARCHAR(1000)
 );
 
 -- =========================

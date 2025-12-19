@@ -17,10 +17,10 @@ class DBConfig:
     @staticmethod
     def from_env() -> "DBConfig":
         return DBConfig(
-            host=os.getenv("DB_HOST", "101.47.177.55"),
-            port=int(os.getenv("DB_PORT", "3308")),
+            host=os.getenv("DB_HOST", "127.0.0.1"),
+            port=int(os.getenv("DB_PORT", "3306")),
             user=os.getenv("DB_USER", "root"),
-            password=os.getenv("DB_PASSWORD", "admin123"),
+            password=os.getenv("DB_PASSWORD", ""),
             database=os.getenv("DB_NAME", "insurance_ods"),
         )
 

@@ -22,4 +22,4 @@ INSERT INTO unstructured_text (customer_id, source_type, raw_text) VALUES
 INSERT INTO ml_model_metadata
 (model_name, model_version, algorithm, eval_metric_name, eval_metric_value, is_active, artifact_path)
 VALUES
-('risk_classifier', 'v1', 'TFIDF+LogReg', 'F1', 0.80, 1, 'artifacts/risk_classifier_v1.joblib');
+('risk_classifier', 'v20251216_191210_afcbb2', 'TFIDF+LogReg', 'F1', 0.80, 1, 'artifacts/risk_classifier_v20251216_191210_afcbb2.joblib');
